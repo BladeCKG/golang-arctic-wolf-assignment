@@ -127,7 +127,7 @@ ok command-line-arguments 0.005s
 
 # Notes
 
-Data Persistence: The application uses in-memory storage for risks. Therefore, data will be lost once the server restarts. For persistent storage, a database like PostgreSQL, MySQL, or MongoDB can be integrated.
+Data Persistence: The application uses in-memory storage for risks.
 
 Versioning: The versioning in this application is designed to demonstrate how different API versions can coexist.
 
