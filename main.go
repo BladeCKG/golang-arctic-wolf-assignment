@@ -16,10 +16,9 @@ type Risk struct {
 	Description string `json:"description"`
 }
 
-// Define a custom type for the RiskState
 type RiskState string
 
-// Define constants for the possible values
+// Define constants for the possible state values
 const (
 	Open          RiskState = "open"
 	Closed        RiskState = "closed"
@@ -37,7 +36,6 @@ func AllRiskStates() []RiskState {
 	}
 }
 
-// In-memory store for risks
 var (
 	riskStore = make(map[string]Risk)
 	mutex     = &sync.Mutex{} // To protect concurrent access to the riskStore
@@ -82,7 +80,6 @@ func createRisk(c *gin.Context) {
 		return
 	}
 
-	// Generate a UUID for the new risk
 	risk.ID = uuid.New().String()
 
 	// Save the risk in the in-memory store
@@ -110,7 +107,6 @@ func getRiskByID(c *gin.Context) {
 }
 
 func main() {
-	// Initialize Gin router
 	router := gin.Default()
 
 	// Version 1 of the API
@@ -122,6 +118,5 @@ func main() {
 		v1.GET("/risks/:id", getRiskByID)
 	}
 
-	// Start the server
 	router.Run(":8080")
 }

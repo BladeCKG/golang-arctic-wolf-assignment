@@ -10,7 +10,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// Helper function to set up the router for testing
 func setupRouter() *gin.Engine {
 	r := gin.Default()
 
