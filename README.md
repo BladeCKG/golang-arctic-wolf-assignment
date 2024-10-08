@@ -112,13 +112,13 @@ go test
 
 ## 2. Test Cases
 
-TestGetRisksEmpty: Verifies that an empty risk list returns an empty array.
+- **TestGetRisksEmpty**: Verifies that an empty risk list returns an empty array.
 
-TestCreateRisk: Tests the creation of a new risk via the POST /v1/risks endpoint.
+- **TestCreateRisk**: Tests the creation of a new risk via the POST /v1/risks endpoint.
 
-TestGetRiskByID: Tests retrieving a specific risk by ID after it's been created.
+- **TestGetRiskByID**: Tests retrieving a specific risk by ID after it's been created.
 
-TestGetRiskByIDNotFound: Tests the behavior when trying to retrieve a non-existent risk.
+- **TestGetRiskByIDNotFound**: Tests the behavior when trying to retrieve a non-existent risk.
 
 The tests simulate HTTP requests and check the expected responses without the need for a running server, using Go's httptest package.
 
