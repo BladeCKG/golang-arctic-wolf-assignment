@@ -13,9 +13,13 @@ import (
 // Helper function to set up the router for testing
 func setupRouter() *gin.Engine {
 	r := gin.Default()
-	r.GET("/v1/risks", getRisks)
-	r.POST("/v1/risks", createRisk)
-	r.GET("/v1/risks/:id", getRiskByID)
+
+	v1 := r.Group("v1")
+	{
+		v1.GET("/risks", getRisks)
+		v1.POST("/risks", createRisk)
+		v1.GET("/risks/:id", getRiskByID)
+	}
 	return r
 }
 
