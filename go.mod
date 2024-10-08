@@ -1,4 +1,4 @@
-module github.com/BladeCKG/arctic-wolf-assignment
+module github.com/BladeCKG/golang-arctic-wolf-assignment
 
 go 1.23.1
 
